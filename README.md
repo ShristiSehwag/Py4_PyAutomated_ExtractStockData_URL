@@ -8,7 +8,7 @@ The user is prompted to input a ticker symbol (like AAPL, MSFT) and two dates (`
 
 Using `time.mktime`, the `datetime` objects are converted into Unix timestamps (`from_epoch` and `to_epoch`). Unix timestamps are the number of seconds that have elapsed since January 1, 1970 (UTC).
 
-A URL string is constructed using Yahoo Finance's API (`query1.finance.yahoo.com`) to fetch historical stock data (`https://query1.finance.yahoo.com/v7/finance/download/`). It includes the ticker symbol (`ticker`), start and end timestamps (`period1` and `period2`), interval (`1d` for daily), and events to retrieve (`history` and `includeAdjustedClose=true`).
+A URL string is constructed using Yahoo Finance's API (`query1.finance.yahoo.com`) to fetch historical stock data (`https://query1.finance.yahoo.com/v7/finance/download/`). It includes the ticker symbol (`ticker`), start and end timestamps (`period1` and `period2`), interval (`1d` for daily), and events to retrieve (`history` and `includeAdjustedClose=true`). (which is initially copied from website download button and then modified)
 
 `requests.get` sends an HTTP GET request to the constructed URL. The request includes headers to mimic a web browser (`User-Agent` header). The response is fetched as raw content (`content`).
 
